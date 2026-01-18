@@ -27,7 +27,6 @@ import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPrefer
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.TextPreference
 import app.morphe.patches.shared.misc.settings.settingsPatch
-import app.morphe.patches.youtube.misc.check.checkEnvironmentPatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.fix.contentprovider.fixContentProviderPatch
 import app.morphe.patches.youtube.misc.fix.likebutton.fixLikeButtonPatch
@@ -188,7 +187,6 @@ val settingsPatch = bytecodePatch(
         fixContentProviderPatch,
         // Currently there is no easy way to make a mandatory patch,
         // so for now this is a dependent of this patch.
-        checkEnvironmentPatch,
         addLicensePatch,
         experimentalAppNoticePatch(
             mainActivityFingerprint = YouTubeActivityOnCreateFingerprint,
