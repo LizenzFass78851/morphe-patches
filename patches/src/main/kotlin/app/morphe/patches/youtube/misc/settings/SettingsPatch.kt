@@ -46,7 +46,6 @@ import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPrefer
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.TextPreference
 import app.morphe.patches.shared.misc.settings.settingsPatch
-import app.morphe.patches.youtube.misc.check.checkEnvironmentPatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.fix.contentprovider.fixContentProviderPatch
 import app.morphe.patches.youtube.misc.fix.likebutton.fixLikeButtonPatch
@@ -228,7 +227,6 @@ val settingsPatch = bytecodePatch(
         fixPipChatBarPatch,
         addLicensePatch,
         removeLinkVerification,
-        checkEnvironmentPatch,
         experimentalAppNoticePatch(
             mainActivityFingerprint = YouTubeActivityOnCreateFingerprint,
             recommendedAppVersion = COMPATIBILITY_YOUTUBE.targets.first { !it.isExperimental }.version!!
